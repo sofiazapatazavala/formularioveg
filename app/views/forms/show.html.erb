@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre</strong>
+  <%= @form.nombre %>
+</p>
+
+<p>
+  <strong>Mail</strong>
+  <%= @form.email %>
+</p>
+
+<p>
+  <strong>Edad</strong>
+  <%= @form.edad %>
+</p>
+
+<p>
+  <strong>Género</strong>
+  <%= @form.genero %>
+</p>
+
+<p>
+  <strong>Comuna</strong>
+  <%= @form.comuna %>
+</p>
+
+<p>
+  <strong>Tipo de Alimentación</strong>
+  <%= @form.TipoDeAlimentacion %>
+</p>
+
+<p>
+  <strong>¿Vive con algún animal en su casa?</strong>
+  <%= @form.ViveConAnimales %>
+</p>
+
+<p>
+  <strong>¿Cual es para usted la problematica animal mas urgente e importante hoy en Chile?</strong>
+  <%= @form.ProblematicaAnimal %>
+</p>
+
+<p>
+  <strong>¿Votó en las últimas elecciones municipales?</strong>
+  <%= @form.VotoEnElecciones %>
+</p>
+
+<p>
+  <strong>En las próximas elecciones municipales, ¿votaría por un candidato animalista como primera opción?</strong>
+  <%= @form.CandidatoAnimalista %>
+</p>
+
+<p>
+  <strong>¿Votaría por un candidato animalista hombre?</strong>
+  <%= @form.CandidatoAnimalistaHombre %>
+</p>
+
+<p>
+  <strong>¿Votaría por un candidato animalista mujer?</strong>
+  <%= @form.CandidatoAnimalistaMujer %>
+</p>
+
+<p>
+  <strong>¿Votaría por un candidato animalista menor de 35 años?</strong>
+  <%= @form.CandidatoAnimalistaJoven %>
+</p>
+
+<p>
+  <strong>¿Sería relevante en su decisión que el candidato animalista también promoviera la alimentación sana y el cuidado ambiental?</strong>
+  <%= @form.CandidatoPromotorAmbientalista %>
+</p>
+
+<p>
+  <strong>¿Participaría como voluntario en una campaña política animalista en su comuna?</strong>
+  <%= @form.VoluntarioAnimalista %>
+</p>
+
+<%= link_to 'Edit', edit_form_path(@form) %> |
+<%= link_to 'Back', forms_path %>
