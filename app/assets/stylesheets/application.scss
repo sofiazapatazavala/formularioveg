@@ -14,5 +14,15 @@
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 
+$font-family-sans-serif:  "raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
+$brand-primary: #85CC56;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body { padding-top: 20px; }
+
+.form-control:focus { border-color: $brand-primary; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 204, 86, 0.6); }
+
+.sub-header { background-color: $gray-dark; color: #fff; border-left-color: $brand-primary; border-left-style: solid; border-left-width: thick; padding: 0.5em; }
+.footer { background-color: $gray-dark; color: #fff; border-top-color: $brand-primary; border-top-style: solid; border-top-width: thick; margin-top: 1em; margin-bottom: 0; padding: 0.5em; }

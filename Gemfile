@@ -40,3 +40,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
+# gem 'filterrific'
