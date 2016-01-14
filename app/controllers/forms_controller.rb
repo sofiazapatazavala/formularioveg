@@ -12,15 +12,13 @@ class FormsController < ApplicationController
 def index
   #@forms = Form.all
   @forms = Form.paginate(:page => params[:page], :per_page => 5)
-  @allforms = Form.all
   respond_to do |format|
     format.html
-    format.csv do
-      headers['Content-Disposition'] = "attachment; filename=\"form-list\""
-      headers['Content-Type'] ||= 'text/csv'
+    format.csv
     end
   end
-end
+
+
     
   # GET /forms/1
   # GET /forms/1.json
