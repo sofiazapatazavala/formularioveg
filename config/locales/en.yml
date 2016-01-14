@@ -21,3 +21,58 @@
 
 en:
   hello: "Hello world"
+  
+en:
+  activerecord:
+    attributes:
+      form:
+        nombre: "Tu nombre"
+        email: "Tu E-mail"
+        edad: "Tu edad"
+        genero: "Tu género"
+        comuna: "Tu comuna"
+        TipoDeAlimentacion: "Tu tipo de alimentación"
+        ViveConAnimales: "¿Vive con algún animal en su casa?"
+        ProblematicaAnimal: "¿Cual es para usted la problematica animal mas urgente e importante hoy en Chile?"
+        VotoEnElecciones: "¿Votó en las últimas elecciones municipales?"
+        CandidatoAnimalista: "En las próximas elecciones municipales, ¿votaría por un candidato animalista como primera opción?"
+        CandidatoAnimalistaHombre: "¿Votaría por un candidato animalista hombre?"
+        CandidatoAnimalistaMujer: "¿Votaría por un candidato animalista mujer?"
+        CandidatoAnimalistaJoven: "¿Votaría por un candidato animalista menor de 35 años?"
+        CandidatoPromotorAmbientalista: "¿Sería relevante en su decisión que el candidato animalista también promoviera la alimentación sana y el cuidado ambiental?"
+        VoluntarioAnimalista: "¿Participaría como voluntario en una campaña política animalista en su comuna?"
+    errors:
+      models:
+        form:
+          attributes:
+            nombre:
+              blank: "es requerido"
+            email:
+              blank: "es requerido"
+              taken: "ya esta registrado"
+            edad:
+              blank: "es requerido"
+            genero:
+              blank: "es requerido"
+            comuna:
+              blank: "es requerida"
+            TipoDeAlimentacion:
+              blank: "es requerido"
+            ViveConAnimales:
+              blank: "debe ser respondida"
+            ProblematicaAnimal:
+              blank: "debe ser respondida"
+            VotoEnElecciones:
+              blank: "debe ser respondida"
+            CandidatoAnimalista:
+              blank: "debe ser respondida"
+            CandidatoAnimalistaHombre:
+              blank: "debe ser respondida"
+            CandidatoAnimalistaMujer:
+              blank: "debe ser respondida"
+            CandidatoAnimalistaJoven:
+              blank: "debe ser respondida"
+            CandidatoPromotorAmbientalista:
+              blank: "debe ser respondida"
+            VoluntarioAnimalista:
+              blank: "debe ser respondida"              

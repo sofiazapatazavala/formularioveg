@@ -2,9 +2,6 @@ class SiteController < ApplicationController
   def home
   end
 
-  def about
-  end
-
-  def form
+  def gracias
   end
 end

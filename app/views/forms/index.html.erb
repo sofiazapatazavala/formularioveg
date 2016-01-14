@@ -1,4 +1,9 @@
-<h1>Listing forms</h1>
+<h1>Lista de respuestas</h1>
+
+<%= link_to 'Bajar lista en formato CSV', forms_path(format: :csv), :class => 'btn btn-primary', :role => 'button'  %>
+
+<%= will_paginate @forms %>
+
 
 <div class="table-responsive">
 <table class="table">
@@ -41,9 +46,9 @@
         <td><%= form.CandidatoAnimalistaJoven %></td>
         <td><%= form.CandidatoPromotorAmbientalista %></td>
         <td><%= form.VoluntarioAnimalista %></td>
-        <td><%= link_to 'Show', form %></td>
-        <td><%= link_to 'Edit', edit_form_path(form) %></td>
-        <td><%= link_to 'Destroy', form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', form %></td>
+        <td><%= link_to 'Editar', edit_form_path(form) %></td>
+        <td><%= link_to 'Borrar', form, method: :delete, data: { confirm: '¿De verdad quieres hacer esto?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -52,4 +57,4 @@
 
 <br>
 
-<%= link_to 'New Form', new_form_path %>
+<%= link_to 'Nueva encuesta', new_form_path,  :class => 'btn btn-default', :role => 'button' %>

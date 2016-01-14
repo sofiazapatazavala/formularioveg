@@ -1,0 +1,5 @@
+<%- headers = ['Nombre', 'Mail', 'Edad', 'Género', 'Comuna', 'Tipo de Alimentación', '¿Vive con algún animal en su casa?', '¿Cual es para usted la problematica animal mas urgente e importante hoy en Chile?', '¿Votó en las últimas elecciones municipales?', 'En las próximas elecciones municipales ¿votaría por un candidato animalista como primera opción?', '¿Votaría por un candidato animalista hombre?', '¿Votaría por un candidato animalista mujer?', '¿Votaría por un candidato animalista menor de 35 años?', '¿Sería relevante en su decisión que el candidato animalista también promoviera la alimentación sana y el cuidado ambiental?', '¿Participaría como voluntario en una campaña política animalista en su comuna?'] -%>
+<%= CSV.generate_line headers %>
+<%- @forms.each do |form| -%>
+<%= CSV.generate_line([form.nombre, form.email, form.edad, form.genero, form.comuna, form.TipoDeAlimentacion, form.ViveConAnimales, form.ProblematicaAnimal, form.VotoEnElecciones, form.CandidatoAnimalista, form.CandidatoAnimalistaHombre, form.CandidatoAnimalistaMujer, form.CandidatoAnimalistaJoven, form.CandidatoPromotorAmbientalista, form.VoluntarioAnimalista]) -%>
+<%- end -%>
