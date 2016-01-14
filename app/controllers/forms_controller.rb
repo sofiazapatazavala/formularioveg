@@ -4,6 +4,7 @@ class FormsController < ApplicationController
 
   # GET /forms
   # GET /forms.json
+<<<<<<< HEAD
     
 #  def index
 #    @forms = Form.all
@@ -20,6 +21,12 @@ def index
 
 
     
+=======
+  def index
+    @forms = Form.all
+  end
+
+>>>>>>> parent of 62613d9... Versión beta 2
   # GET /forms/1
   # GET /forms/1.json
   def show
@@ -41,7 +48,7 @@ def index
 
     respond_to do |format|
       if @form.save
-		format.html { redirect_to gracias_url, notice: 'Tu encuesta fue enviada satisfactoriamente.' }
+        format.html { redirect_to :root, notice: 'Form was successfully created.' }
         format.json { render :show, status: :created, location: @form }
       else
         format.html { render :new }
@@ -55,7 +62,7 @@ def index
   def update
     respond_to do |format|
       if @form.update(form_params)
-		format.html { redirect_to @form, notice: 'La encuesta fue actualizada.' }
+        format.html { redirect_to @form, notice: 'Form was successfully updated.' }
         format.json { render :show, status: :ok, location: @form }
       else
         format.html { render :edit }
@@ -69,7 +76,7 @@ def index
   def destroy
     @form.destroy
     respond_to do |format|
-	  format.html { redirect_to forms_url, notice: 'La encuesta fue borrada.' }
+      format.html { redirect_to forms_url, notice: 'Form was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
