@@ -37,9 +37,10 @@
 
 		
 	  <ul class="nav navbar-nav">
-		  <li><%= link_to 'Ir a encuesta', site_home_path %></li>
-		  <li><%= link_to 'Ver resultados', forms_path %></li>        
-		  <li><%= link_to 'Datos de cuenta', edit_admin_registration_path %></li>
+		  <li><%= link_to 'Encuesta', site_home_path %></li>
+		  <li><%= link_to 'Resultados', forms_path %></li>      
+          <li><%= link_to 'Lista CSV', forms_path(format: :csv) %></li>
+		  <li><%= link_to 'Mi cuenta', edit_admin_registration_path %></li>
       </ul>	  
 	  <div class="navbar-right" style="padding: 8px 4px;">
 		  			
