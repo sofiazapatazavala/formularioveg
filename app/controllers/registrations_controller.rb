@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  before_action :one_user_registered?
+  before_action :one_user_registered?, :except => [:edit,:update,:destroy]
 
   protected
 

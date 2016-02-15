@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+    get 'dashboard' => 'site#home'
 	get 'responder' => 'forms#new'
 	get 'gracias' => 'site#gracias'
 

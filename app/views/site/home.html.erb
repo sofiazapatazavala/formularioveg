@@ -1,14 +1,34 @@
 <div class="row">
 	<div class="col-xs-12">
-		<h1 class="text-center">Política Animalista y II Censo Vegetariano</h1>
-		<hr>
-		<h4>Puedes contestar esta encuesta aunque no seas vegetariano. La idea principal es medir la relación de nuestros lectores con la política y temáticas animalistas.
-Los datos recopilados en esta encuesta serán tratados con total confidencialidad, al igual como en el Primer Censo Vegetariano (2012). Al responder estarás participando automáticamente en el sorteo de un Apple Watch Sport* color zanahoria.</h4>
-	</div>
+		<h1>Política Animalista y II Censo Vegetariano</h1>
+        <hr>
+      <p class="lead">De un vistazo</p>
+  </div>
 </div>
 <div class="row">
-	<div class="col-xs-12">
-		<hr>
-		<%= link_to 'Comenzar', responder_path, 'class' => 'btn btn-primary btn-block btn-lg', 'role' => 'button' %>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">¿Cómo vamos?</h4>
+            <p class="text-center"><em>Próximamente</em></p>
+          </div>
+      </div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">Descargar los resultados</p>
+            <h1 class="text-center"><%= link_to 'Lista CSV', forms_path(format: :csv), :class => 'btn btn-block btn-primary' %></h1>
+            <p class="text-center"><small>Los resultados se descargarán en un archivo CSV que puede importarse y editarse en Excel.</small></p>
+          </div>
+      </div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">Realizar sorteo</h4>
+            <p class="text-center"><em>Próximamente</em></p>
+          </div>
+      </div>
 	</div>
 </div>
