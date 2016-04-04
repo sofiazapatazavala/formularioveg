@@ -14,7 +14,7 @@ def index
   respond_to do |format|
     format.html
     format.csv do
-      headers['Content-Disposition'] = "attachment; filename=\"form-list\""
+      headers['Content-Disposition'] = "attachment; filename=\"form-list.csv\""
       headers['Content-Type'] ||= 'text/csv'
     end
   end
@@ -72,6 +72,10 @@ end
 	  format.html { redirect_to forms_url, notice: 'La encuesta fue borrada.' }
       format.json { head :no_content }
     end
+  end
+  
+  def dashboard
+    @conteo = Form.count
   end
 
   private
