@@ -1,0 +1,86 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h1>Política Animalista y II Censo Vegetariano</h1>
+        <hr>
+      <p class="lead text-center">Datos demográficos de nuestras <%= @total %> encuestas</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Género</h3>
+    </div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">Femenino</h4>
+            <h1 class="text-center"><%= @niñas %></h1>
+          </div>
+      </div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">Masculino</h4>
+            <h1 class="text-center"><%= @niños %></h1>
+          </div>
+      </div>
+	</div>
+	<div class="col-sm-4">
+		<div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-center">No Binario</h4>
+            <h1 class="text-center"><%= @niñes %></h1>
+          </div>
+      </div>
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Comunas</h3>
+    </div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+        <p><strong>Las 5 comunas</strong> con más encuestas recibidas:</p>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <% @comunas.each do |comuna,conteo| %>
+              <tr>
+                <td>
+                  <%= comuna %>
+                </td>
+                <td>
+                  <%= conteo %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>    
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+        <p>Tipos de <strong>alimentación</strong> en orden descendiente:</p>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <% @alim.each do |tipo,conteo| %>
+              <tr>
+                <td>
+                  <%= tipo %>
+                </td>
+                <td>
+                  <%= conteo %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>    
+	</div>
+</div>

@@ -78,6 +78,17 @@ end
     @conteo = Form.count
   end
 
+  def results
+    @total = Form.count
+    @niñas = Form.where(genero: "Femenino").count
+    @niños = Form.where(genero: "Masculino").count
+    @niñes = Form.where(genero: "No_Binario").count + Form.where(genero: "No Binario").count # Oops!
+    
+    @comunas = Form.group(:comuna).order('count_id DESC').limit(5).count(:id)
+    
+    @alim = Form.group(:TipoDeAlimentacion).order('count_id DESC').count(:id)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_form

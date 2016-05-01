@@ -17,7 +17,7 @@
   </div>
   <div class="field form-group">
     <%# f.label :email %><label for="form_email">Correo electrónico:</label><br>
-    <%= f.text_field :email, class: 'form-control' %>
+    <%= f.text_field :email, class: 'form-control', type: 'email' %>
   </div>
   <div class="field form-group">
     <%# f.label :edad %><label for="form_edad">Edad:</label><br>
@@ -43,7 +43,7 @@
       <%= label_tag(:genero_Femenino, "Femenino") %><br />
       <%= radio_button("form", "genero", "Masculino") %>
       <%= label_tag(:genero_Masculino, "Masculino") %><br />
-      <%= radio_button("form", "genero", "No_Binario") %>
+      <%= radio_button("form", "genero", "No Binario") %>
       <%= label_tag(:genero_No_Binario, "No Binario") %>
   </div>
   <!-- <div class="field form-group">
