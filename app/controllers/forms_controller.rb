@@ -4,7 +4,7 @@ class FormsController < ApplicationController
 
   # GET /forms
   # GET /forms.json
-    
+
 #  def index
 #    @forms = Form.all
 #  end
@@ -19,7 +19,7 @@ def index
     end
   end
 end
-    
+
   # GET /forms/1
   # GET /forms/1.json
   def show
@@ -73,20 +73,13 @@ end
       format.json { head :no_content }
     end
   end
-  
+
   def dashboard
     @conteo = Form.count
   end
 
   def results
     @total = Form.count
-    @niñas = Form.where(genero: "Femenino").count
-    @niños = Form.where(genero: "Masculino").count
-    @niñes = Form.where(genero: "No_Binario").count + Form.where(genero: "No Binario").count # Oops!
-    
-    @comunas = Form.group(:comuna).order('count_id DESC').limit(5).count(:id)
-    
-    @alim = Form.group(:TipoDeAlimentacion).order('count_id DESC').count(:id)
   end
 
   private
@@ -97,6 +90,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_params
-      params.require(:form).permit(:nombre, :email, :edad, :genero, :comuna, :TipoDeAlimentacion, :ViveConAnimales, :ProblematicaAnimal, :VotoEnElecciones, :CandidatoAnimalista, :CandidatoAnimalistaHombre, :CandidatoAnimalistaMujer, :CandidatoAnimalistaJoven, :CandidatoPromotorAmbientalista, :VoluntarioAnimalista)
+      params.require(:form).permit(:nombre, :apellido, :email, :ciudad, :pais)
     end
 end

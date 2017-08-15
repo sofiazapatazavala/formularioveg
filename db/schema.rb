@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,45 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211033424) do
+ActiveRecord::Schema.define(version: 20170815025013) do
 
-  create_table "admins", force: true do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
-    t.string   "reset_password_token"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
-    t.boolean  "admin",                  default: false
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-
-  create_table "forms", force: true do |t|
-    t.string   "nombre",                         null: false
-    t.string   "email",                          null: false
-    t.string   "edad"
-    t.string   "genero"
-    t.string   "comuna",                         null: false
-    t.string   "TipoDeAlimentacion"
-    t.string   "ViveConAnimales"
-    t.string   "ProblematicaAnimal"
-    t.string   "VotoEnElecciones"
-    t.string   "CandidatoAnimalista"
-    t.string   "CandidatoAnimalistaHombre"
-    t.string   "CandidatoAnimalistaMujer"
-    t.string   "CandidatoAnimalistaJoven"
-    t.string   "CandidatoPromotorAmbientalista"
-    t.string   "VoluntarioAnimalista"
+  create_table "forms", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "nombre"
+    t.string "apellido"
+    t.string "email"
+    t.string "ciudad"
+    t.string "pais"
   end
 
 end

@@ -1,26 +1,16 @@
 <h1>Lista de respuestas</h1>
 
-<%= link_to 'Bajar lista en formato CSV', forms_path(format: :csv), :class => 'btn btn-primary', :role => 'button'  %>
+<%= link_to 'Descargar lista en formato CSV', forms_path(format: :csv), :class => 'btn btn-primary', :role => 'button'  %>
 
 <div class="table-responsive">
 <table class="table">
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Mail</th>
-      <th>Edad</th>
-      <th>Género</th>
-      <th>Comuna</th>
-      <th>Tipo de Alimentación</th>
-      <th>¿Vive con algún animal en su casa?</th>
-      <th>¿Cual es para usted la problematica animal mas urgente e importante hoy en Chile?</th>
-      <th>¿Votó en las últimas elecciones municipales?</th>
-      <th>En las próximas elecciones municipales, ¿votaría por un candidato animalista como primera opción?</th>
-      <th>¿Votaría por un candidato animalista hombre?</th>
-      <th>¿Votaría por un candidato animalista mujer?</th>
-      <th>¿Votaría por un candidato animalista menor de 35 años?</th>
-      <th>¿Sería relevante en su decisión que el candidato animalista también promoviera la alimentación sana y el cuidado ambiental?</th>
-      <th>¿Participaría como voluntario en una campaña política animalista en su comuna?</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Ciudad</th>
+      <th>País</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,20 +19,10 @@
     <% @forms.each do |form| %>
       <tr>
         <td><%= form.nombre %></td>
+        <td><%= form.apellido %></td>
         <td><%= form.email %></td>
-        <td><%= form.edad %></td>
-        <td><%= form.genero %></td>
-        <td><%= form.comuna %></td>
-        <td><%= form.TipoDeAlimentacion %></td>
-        <td><%= form.ViveConAnimales %></td>
-        <td><%= form.ProblematicaAnimal %></td>
-        <td><%= form.VotoEnElecciones %></td>
-        <td><%= form.CandidatoAnimalista %></td>
-        <td><%= form.CandidatoAnimalistaHombre %></td>
-        <td><%= form.CandidatoAnimalistaMujer %></td>
-        <td><%= form.CandidatoAnimalistaJoven %></td>
-        <td><%= form.CandidatoPromotorAmbientalista %></td>
-        <td><%= form.VoluntarioAnimalista %></td>
+        <td><%= form.ciudad %></td>
+        <td><%= form.pais %></td>
         <td><%= link_to 'Mostrar', form %></td>
         <td><%= link_to 'Editar', edit_form_path(form) %></td>
         <td><%= link_to 'Borrar', form, method: :delete, data: { confirm: '¿De verdad quieres hacer esto?' } %></td>
