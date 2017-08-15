@@ -1,1 +1,1 @@
-json.extract! @form, :id, :nombre, :email, :edad, :genero, :comuna, :TipoDeAlimentacion, :ViveConAnimales, :ProblematicaAnimal, :VotoEnElecciones, :CandidatoAnimalista, :CandidatoAnimalistaHombre, :CandidatoAnimalistaMujer, :CandidatoAnimalistaJoven, :CandidatoPromotorAmbientalista, :VoluntarioAnimalista, :created_at, :updated_at
+json.extract! @form, :id, :nombre, :apellido, :email, :ciudad, :pais, :created_at, :updated_at

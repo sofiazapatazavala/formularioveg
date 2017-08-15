@@ -3,26 +3,24 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
-
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
  */
-
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 
 $font-family-sans-serif:  "raleway", Helvetica Neue, Helvetica, Arial, sans-serif;
 $brand-primary: #85CC56;
 
-@import "bootstrap-sprockets";
+// Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
 body { padding-top: 20px; }
 
 .form-control:focus { border-color: $brand-primary; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(133, 204, 86, 0.6); }
 
-.sub-header { background-color: $gray-dark; color: #fff; border-left-color: $brand-primary; border-left-style: solid; border-left-width: thick; padding: 0.5em; }
-.footer { background-color: $gray-dark; color: #fff; border-top-color: $brand-primary; border-top-style: solid; border-top-width: thick; margin-top: 1em; margin-bottom: 0; padding: 0.5em; }
+.sub-header { background-color: $gray-800; color: #fff; border-left-color: $brand-primary; border-left-style: solid; border-left-width: thick; padding: 0.5em; }
+.footer { background-color: $gray-800; color: #fff; border-top-color: $brand-primary; border-top-style: solid; border-top-width: thick; margin-top: 1em; margin-bottom: 0; padding: 0.5em; }

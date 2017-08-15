@@ -1,11 +1,6 @@
 <div class="row">
-	<div class="col-sm-10 col-sm-offset-1">
-		<h1>Política Animalista y II Censo Vegetariano</h1>
+	<div class="col">
 		<h3 class="sub-header">Nueva Encuesta</h3>
-        <p>Puedes contestar esta encuesta aunque no seas vegetariano. La idea principal es medir la relación de nuestros lectores con la política y temáticas animalistas.
-Los datos recopilados en esta encuesta serán tratados con total confidencialidad, al igual como en el Primer Censo Vegetariano (2012). Al responder estarás participando automáticamente en el sorteo de una máquina Biomilk* para hacer leches vegetales (precio de referencia: $98.000)</p>
-          <p><small>*Para participar en el sorteo tus datos deberán ser reales. Si contestas la encuesta más de una vez, quedarás eliminado. El sorteo se realizará en abril 2016.</small></p>
-
 		<%= render 'form' %>
 		<% if admin_signed_in? %>
     	<%= link_to 'Volver', forms_path, class: 'btn btn-block btn-default' %>
